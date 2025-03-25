@@ -1,0 +1,679 @@
+:root {
+   --primary-color: #0d674a;
+   --secondary-color: #04b954;
+   --accent-color: #75d6b0;
+   --background-color: #f4f6f7;
+   --text-color: #0d3e32;
+   --transition-speed: 0.3s;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+   background-color: var(--background-color);
+   color: var(--text-color);
+   line-height: 1.6;
+}
+
+.navbar {
+   background-color: var(--primary-color);
+   color: white;
+   display: flex;
+   justify-content: space-between;
+   padding: 1rem 2rem;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar .navbar-nav{
+   letter-spacing: 1.5px;
+}
+
+.navbar .navbar-brand {
+   display: flex;
+   align-items: center;
+   letter-spacing: 2px;
+}
+.navbar .navbar-brand  img {
+   margin-right: 20px;
+   border-radius: 50%;
+}
+
+
+.navbar-nav a {
+   color: white;
+   text-decoration: none;
+   margin: 0 10px;
+   transition: color var(--transition-speed);
+}
+
+.navbar-nav a:hover {
+   color: var(--secondary-color);
+}
+
+.page {
+   display: none;
+   padding: 2rem;
+}
+
+.page.active {
+   display: block;
+}
+
+.hero-section {
+   text-align: center;
+   max-width: 900px;
+   margin: 0 auto;
+   padding: 2rem 0;
+}
+
+.hero-title {
+   font-size: 3rem;
+   color: var(--primary-color);
+   margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+   font-size: 1.5rem;
+   color: var(--secondary-color);
+   margin-bottom: 2rem;
+}
+
+.feature-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1.5rem;
+}
+
+.feature-card {
+   background: white;
+   padding: 1.5rem;
+   border-radius: 10px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   transition: transform var(--transition-speed);
+}
+
+.feature-card:hover {
+   transform: translateY(-10px);
+}
+
+.feature-icon {
+   font-size: 3rem;
+   margin-bottom: 1rem;
+}
+
+.cipher-controls {
+   background-color: white;
+   padding: 2rem;
+   border-radius: 10px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+   margin-bottom: 1rem;
+}
+
+.form-group input {
+   width: 100%;
+   padding: 0.5rem;
+   border: 1px solid var(--secondary-color);
+   border-radius: 4px;
+}
+
+.cipher-actions {
+   display: flex;
+   gap: 1rem;
+}
+
+.btn-encrypt,
+.btn-decrypt {
+   background-color: var(--secondary-color);
+   color: white;
+   border: none;
+   padding: 0.5rem 1rem;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background-color var(--transition-speed);
+}
+
+.btn-decrypt {
+   background-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+   .feature-grid {
+      grid-template-columns: 1fr;
+   }
+}
+
+/* Previous CSS remains the same, adding some enhancements */
+.cryptosystem-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   gap: 1.5rem;
+}
+
+.cryptosystem-card {
+   background: white;
+   border: 1px solid var(--secondary-color);
+   border-radius: 10px;
+   padding: 1.5rem;
+   text-align: center;
+   transition: all var(--transition-speed);
+   cursor: pointer;
+}
+
+.cryptosystem-card:hover {
+   transform: scale(1.05);
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cryptosystem-card .learn-more {
+   color: var(--secondary-color);
+   font-weight: bold;
+   margin-top: 1rem;
+   display: block;
+}
+
+#cipherImplementation {
+   margin-top: 2rem;
+   background-color: white;
+   border-radius: 10px;
+   padding: 2rem;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#cipherImplementation h3 {
+   color: var(--primary-color);
+   margin-bottom: 1rem;
+}
+
+#cipherDescription {
+   margin-bottom: 1.5rem;
+   color: var(--text-color);
+}
+
+.cipher-controls {
+   margin-top: 1rem;
+   padding: 1rem;
+   background-color: var(--background-color);
+   border-radius: 8px;
+}
+
+
+/* About Section Styles */
+.about-section {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 2rem;
+}
+
+#about h2,
+#about h3 {
+   letter-spacing: 2px;
+   color: var(--secondary-color);
+}
+.about-content {
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   gap: 2rem;
+}
+
+.about-text p {
+   margin-bottom: 1rem;
+}
+
+.about-topics {
+   list-style-type: disc;
+   padding-left: 2rem;
+   margin-bottom: 1rem;
+}
+
+.team-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   gap: 1rem;
+}
+
+.team-member {
+   text-align: center;
+   background: white;
+   padding: 1rem;
+   border-radius: 10px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-bottom: 1rem;
+}
+
+/* Contact Section Styles */
+.contact-section {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 2rem;
+}
+
+.contact-content {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 2rem;
+}
+
+.contact-info {
+   display: grid;
+   gap: 1rem;
+}
+
+.contact-method {
+   background: white;
+   padding: 1.5rem;
+   border-radius: 10px;
+   text-align: center;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-method i {
+   font-size: 3rem;
+   color: var(--secondary-color);
+   margin-bottom: 1rem;
+}
+
+.contact-form form {
+   display: grid;
+   gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+   width: 100%;
+   padding: 0.75rem;
+   border: 1px solid var(--secondary-color);
+   border-radius: 5px;
+}
+
+.contact-form textarea {
+   height: 150px;
+}
+
+.contact-form button {
+   background-color: var(--secondary-color);
+   color: white;
+   border: none;
+   padding: 0.75rem;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color var(--transition-speed);
+}
+
+.contact-form button:hover {
+   background-color: var(--primary-color);
+}
+
+/* Footer Styles */
+.site-footer {
+   background-color: var(--primary-color);
+   max-height: fit-content;
+   color: white;
+   padding: 10px 0;
+   text-align: center;
+   
+}
+
+.footer-content {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: grid;
+   gap: 8px;
+}
+
+.footer-links {
+   display: flex;
+   justify-content: center;
+   gap: 8px;
+}
+
+.footer-links a {
+   color: white;
+   text-decoration: none;
+   transition: color var(--transition-speed);
+}
+
+.footer-links a:hover {
+   color: var(--secondary-color);
+}
+
+.footer-social {
+   display: flex;
+   justify-content: center;
+   gap: 1.5rem;
+}
+
+.social-icon {
+   color: white;
+   font-size: 1.5rem;
+   transition: color var(--transition-speed);
+}
+
+.social-icon:hover {
+   color: var(--secondary-color);
+}
+
+.footer-copyright {
+   margin-top: 5px;
+   font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+   .about-content,
+   .contact-content {
+      grid-template-columns: 1fr;
+   }
+}
+
+/* Styles for Cipher Detail Pages */
+.cipher-detail-container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 2rem;
+}
+
+.cipher-detail-content {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 2rem;
+   background-color: white;
+   border-radius: 10px;
+   padding: 2rem;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cipher-image img {
+   width: 100%;
+   max-height: 500px;
+   object-fit: cover;
+   border-radius: 10px;
+}
+
+.cipher-description h1 {
+   color: var(--primary-color);
+   margin-bottom: 1.5rem;
+   text-align: center;
+}
+
+.cipher-description h2 {
+   color: var(--secondary-color);
+   margin-top: 1.5rem;
+   margin-bottom: 1rem;
+}
+
+.cipher-steps {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1rem;
+   margin-top: 1.5rem;
+}
+
+.step {
+   background-color: var(--background-color);
+   padding: 1.5rem;
+   border-radius: 10px;
+   text-align: center;
+}
+
+.step h3 {
+   color: var(--primary-color);
+   margin-bottom: 0.5rem;
+}
+
+.back-button {
+   background-color: var(--secondary-color);
+   color: white;
+   border: none;
+   padding: 0.75rem 1.5rem;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-bottom: 1rem;
+   transition: background-color var(--transition-speed);
+}
+
+.back-button:hover {
+   background-color: var(--primary-color);
+}
+
+/* Live Testing Styles for Caesar Cipher */
+.cipher-container {
+   background-color: white;
+   border-radius: 10px;
+   padding: 2rem;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+   max-width: 600px;
+   margin: 0 auto;
+}
+
+.cipher-container h3 {
+   color: var(--primary-color);
+   text-align: center;
+   margin-bottom: 1.5rem;
+   letter-spacing: 2px;
+}
+
+.input-group {
+   margin-bottom: 1.5rem;
+}
+
+.input-group label {
+   display: block;
+   margin-bottom: 0.5rem;
+   color: var(--text-color);
+   font-weight: bold;
+}
+
+.input-group input,
+.input-group textarea {
+   width: 100%;
+   padding: 0.75rem;
+   border: 1px solid var(--secondary-color);
+   border-radius: 5px;
+   transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+   outline: none;
+   border-color: var(--accent-color);
+   box-shadow: 0 0 0 3px rgba(117, 214, 176, 0.2);
+}
+
+.input-group textarea {
+   resize: vertical;
+}
+
+.input-group textarea[readonly] {
+   background-color: var(--background-color);
+   cursor: not-allowed;
+}
+
+.button-group {
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+}
+
+.btn-encrypt,
+.btn-decrypt {
+   flex: 1;
+   background-color: var(--secondary-color);
+   color: white;
+   border: none;
+   padding: 0.75rem 1.5rem;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color var(--transition-speed), transform var(--transition-speed);
+   font-weight: bold;
+   letter-spacing: 1px;
+}
+
+.btn-encrypt:hover,
+.btn-decrypt:hover {
+   background-color: var(--primary-color);
+   transform: translateY(-3px);
+}
+
+.btn-decrypt {
+   background-color: var(--accent-color);
+}
+
+.btn-decrypt:hover {
+   background-color: var(--secondary-color);
+}
+
+
+
+
+
+
+/* responsivity section" |*_^| */
+
+@media screen and (min-width: 1440px) {
+
+   .hero-section,
+   .feature-grid,
+   .cryptosystem-grid,
+   .about-content,
+   .contact-content {
+      max-width: 1400px;
+      margin: 0 auto;
+   }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+   .cipher-detail-container {
+      padding: 10px;
+   }
+
+   .cipher-detail-content {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .cipher-description {
+      width: 100%;
+      text-align: center;
+   }
+
+   .cipher-image img {
+      max-width: 100%;
+      height: auto;
+   }
+
+   .cipher-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   .step {
+      width: 100%;
+   }
+
+   .cipher-code-implementation pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+   }
+
+   .cipher-container {
+      width: 100%;
+      padding: 15px;
+   }
+
+   .input-group {
+      width: 100%;
+   }
+
+   .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+   }
+
+   .btn-encrypt,
+   .btn-decrypt {
+      width: 100%;
+   }
+}
+
+@media screen and (max-width: 768px) {
+
+   h1,
+   h2,
+   h3 {
+      font-size: 1.2em;
+   }
+
+   .cipher-description p {
+      font-size: 0.9em;
+   }
+
+   .cipher-image img {
+      width: 100%;
+   }
+
+   .cipher-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   .cipher-detail-container {
+      padding: 5px;
+   }
+
+   h1 {
+      font-size: 1.5em;
+   }
+
+   h2,
+   h3 {
+      font-size: 1.1em;
+   }
+
+   .cipher-description p {
+      font-size: 0.8em;
+      text-align: justify;
+   }
+
+   .cipher-container {
+      width: 100%;
+   }
+
+   .input-group label {
+      font-size: 0.9em;
+   }
+
+   .input-group input {
+      width: 100%;
+   }
+
+   .button-group {
+      width: 100%;
+   }
+
+   .btn-encrypt,
+   .btn-decrypt {
+      font-size: 1em;
+   }
+}

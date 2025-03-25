@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Binary Bastion</title>
+   <link rel="stylesheet" href="./css/style.css">
+   <script  src="./js/main.js" defer></script>
+   <!-- title icon -->
+   <link rel="shortcut icon" href="./assets/images/logo.png" type="image/png">
+   <!-- font awosome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+   <nav class="navbar">
+      <div class="navbar-brand">
+         <img src="./assets/images/logo.png" width="40" alt=""> Binary Bastion
+      </div>
+      <div class="navbar-nav">
+         <a href="#" data-page="home">Home</a>
+         <a href="#" data-page="cryptosystems">Cryptosystems</a>
+         <a href="#" data-page="about">About</a>
+         <a href="#" data-page="contact">Contact</a>
+      </div>
+   </nav>
+
+   <div id="pages">
+      <!-- Home Page with Enhanced Design -->
+      <div id="home" class="page active">
+         <div class="hero-section">
+               <h1 class="hero-title"><span class="multipel-text"></span></h1>
+               <p class="hero-subtitle">Learn, Explore, and Master Secure Communication</p>
+               
+               <div class="feature-grid">
+                  <div class="feature-card">
+                     <div class="feature-icon">🧩</div>
+                     <h3>Interactive Learning</h3>
+                     <p>Dive deep into cryptographic algorithms with hands-on demonstrations.</p>
+                  </div>
+                  <div class="feature-card">
+                     <div class="feature-icon">🔒</div>
+                     <h3>Practical Security</h3>
+                     <p>Understand real-world encryption and decryption techniques.</p>
+                  </div>
+                  <div class="feature-card">
+                     <div class="feature-icon">🌐</div>
+                     <h3>Multiple Techniques</h3>
+                     <p>Explore diverse cryptographic methods from classical to modern.</p>
+                  </div>
+               </div>
+         </div>
+      </div>
+
+         <!-- Cryptosystems Page -->
+      <div id="cryptosystems" class="page">
+         <div id="cipherImplementation" style="display: none;">
+                     <h3 id="cipherTitle">Caesar Cipher Demonstrator</h3>
+               </div>
+               <h2>Explore Cryptographic Systems</h2>
+               <div class="cryptosystem-grid">
+                  <div class="cryptosystem-card" data-cipher="caesar">
+                     <h3>Caesar Cipher</h3>
+                     <p>A historic substitution cipher shifting letters in the alphabet.</p>
+                     <span class="learn-more">Click to Learn More</span>
+                  </div>
+                  <div class="cryptosystem-card" data-cipher="otp">
+                     <h3>One-Time Pad (OTP)</h3>
+                     <p>Unbreakable encryption using a random key used only once.</p>
+                     <span class="learn-more">Click to Learn More</span>
+                  </div>
+                  <div class="cryptosystem-card" data-cipher="lfsr">
+                     <h3>Linear Feedback Shift Register (LFSR)</h3>
+                     <p>Pseudorandom number generator used in stream ciphers.</p>
+                     <span class="learn-more">Click to Learn More</span>
+                  </div>
+                  <div class="cryptosystem-card" data-cipher="rsa">
+                     <h3>RSA Cryptosystem</h3>
+                     <p>Asymmetric encryption using public and private keys.</p>
+                     <span class="learn-more">Click to Learn More</span>
+                  </div>
+                  <div class="cryptosystem-card" data-cipher="ecc">
+                     <h3>Elliptic Curve Cryptography (ECC)</h3>
+                     <p>Public-key cryptography based on elliptic curve theory.</p>
+                     <span class="learn-more">Click to Learn More</span>
+                  </div>
+                  <div class="cryptosystem-card" data-cipher="diffie-hellman">
+                     <h3>Diffie-Hellman Key Exchange</h3>
+                     <p>Secure method for exchanging cryptographic keys over public channels.</p>
+                     <span class="learn-more">Click to Learn More</span>
+                  </div>
+                  <div class="cryptosystem-card" data-cipher="elgamal">
+                     <h3>ElGamal Encryption</h3>
+                     <p>Public-key cryptosystem based on discrete logarithm problem.</p>
+                     <span class="learn-more">Click to Learn More</span>
+                  </div>
+               </div>
+
+               <div id="cipherImplementation" style="display: none;">
+                  <h3 id="cipherTitle">Cryptosystem Demonstrator</h3>
+                  <div id="cipherDescription"></div>
+                  <div id="keyGenerationSection" class="cipher-controls">
+                     <h4>Key Generation</h4>
+                     <div id="keyGenerationContent"></div>
+                  </div>
+                  <div id="encryptionSection" class="cipher-controls">
+                     <h4>Encryption</h4>
+                     <div id="encryptionContent"></div>
+                  </div>
+                  <div id="decryptionSection" class="cipher-controls">
+                     <h4>Decryption</h4>
+                     <div id="decryptionContent"></div>
+                  </div>
+               </div>
+      </div>
+
+            <!-- About Us Page -->
+      <div id="about" class="page">
+         <div class="about-section">
+            <h2>About Binary Bastion</h2>
+            <div class="about-content">
+               <div class="about-text">
+                  <p>We are a dedicated group of Information Security Engineering students from Batna University, united by our passion for cybersecurity and cryptography. Our journey in the field has inspired us to create <strong>Binary Bastion</strong>, an interactive platform designed to simplify and demystify the complexities of modern cryptosystems.</p>
+                  
+                  <p>As emerging professionals in the realm of information security, we believe in the power of hands-on learning and innovative technology to transform how cryptography is taught and understood.</p>
+                  
+                  <p>Through this project, we aim not only to deepen our own knowledge but also to empower others by providing clear, engaging, and accessible content on critical security topics such as:</p>
+                  
+                  <ul class="about-topics">
+                     <li>One-Time Pad (OTP)</li>
+                     <li>Linear Feedback Shift Register (LFSR)</li>
+                     <li>RSA Cryptosystem</li>
+                     <li>Elliptic Curve Cryptography (ECC)</li>
+                     <li>Diffie-Hellman Key Exchange</li>
+                     <li>ElGamal Encryption</li>
+                  </ul>
+                  
+                  <p>We are committed to building secure, user-friendly applications and continuously exploring new ways to bring advanced cryptographic concepts to life.</p>
+               <div class="about-team">
+                  <h3>Our Team</h3>
+                  <div class="team-grid">
+                     <div class="team-member">
+                        <img src="./assets/images/about_us_nidhal.jpg" width="40px" alt="Team Member">
+                        <h4>Nidhal Lhassen</h4>
+                        <p>full stack Developer & information security student (ennginer)</p>
+                     </div>
+                     <!-- i will  Add more team members -->
+                  </div>
+               </div>
+            </div>
+               </div>
+
+         </div>
+      </div>
+
+      <!-- Contact Page -->
+      <div id="contact" class="page">
+         <div class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+               <div class="contact-info">
+                  <div class="contact-method">
+                     <i class="fas fa-envelope"></i>
+                     <h3>Email</h3>
+                     <p>nidalhelahessane@gmail.com</p>
+                  </div>
+                  <div class="contact-method">
+                     <i class="fas fa-map-marker-alt"></i>
+                     <h3>Location</h3>
+                     <p>Batna University, Constantine Road, Batna, Algeria</p>
+                  </div>
+                  <div class="contact-method">
+                     <i class="fas fa-phone"></i>
+                     <h3>Phone</h3>
+                     <p>+213 795046486</p>
+                  </div>
+               </div>
+               <div class="contact-form">
+                  <form>
+                     <input type="text" placeholder="Your Name" required>
+                     <input type="email" placeholder="Your Email" required>
+                     <textarea placeholder="Your Message" required></textarea>
+                     <button type="submit">Send Message</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+   </div>
+   </div>
+
+   <!-- Footer -->
+   <footer class="site-footer">
+      <div class="footer-content">
+         <div class="footer-social">
+            <a target="_blank" href="https://github.com/NIDHAL198" class="social-icon" ><i class="fab fa-github"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/nidhal-lahessane-8ba0a6296/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=100008411926526" class="social-icon"><i class="fab fa-facebook"></i></a>
+         </div>
+         <div class="footer-copyright">
+            Made with <i class="fas fa-heart" style="color: red;"></i> by Nidhal Lhassen © 2025 Binary Bastion
+         </div>
+      </div>
+   </footer>
+      <!-- typed js lib -->
+   <script  src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</body>
+</html>
