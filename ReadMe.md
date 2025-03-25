@@ -25,7 +25,7 @@ Binary Bastion is an interactive web application designed to make learning crypt
 Clone the repository to get started:  
 
 ```bash
-git clone https://github.com/NIDHAL198/<repository-name>.git
+git clone [https://github.com/NIDHAL198/<repository-name>](https://github.com/NIDHAL198/Binary-Bastion).git
 ```
 
 Jump in, explore the world of cryptography, and empower your learning journey with Binary Bastion! 🚀🔐
