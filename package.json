@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "homepage" : "http://NIDHAL198.github.io/Binary-Bastion",
+    "gh-pages": "^6.3.0"
+  },
+"scripts": {
+  "deploy": "gh-pages -d ."
+}
+
+}
