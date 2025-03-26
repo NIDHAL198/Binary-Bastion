@@ -266,7 +266,7 @@ decryptCaesarCipher() {
                         
                         <div class="input-group">
                            <label for="encryptedText">Encrypted Text:</label>
-                           <input type="text" id="encryptedText" placeholder="output" readonly>
+                           <input type="text" id="encryptedText" placeholder="output" >
                         </div>
                         
                         <div class="button-group">
