@@ -1,0 +1,647 @@
+/* Modern Cryptography Platform Styles */
+
+:root {
+   --primary-color: #0d674a;
+   --secondary-color: #04b954;
+   --accent-color: #75d6b0;
+   --background-color: #f4f6f7;
+   --text-color: #0d3e32;
+   --transition-speed: 0.3s;
+   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   --card-shadow: 0 10px 20px rgba(13, 103, 74, 0.1);
+   --border-radius: 8px;
+}
+
+/* Global Styles */
+body {
+   font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+   background-color: var(--background-color);
+   color: var(--text-color);
+   line-height: 1.6;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+   font-size: 16px;
+   /* Base font size */
+}
+
+/* Responsive typography */
+@media (max-width: 480px) {
+   body {
+      font-size: 14px;
+   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: 600;
+   margin-top: 1.5rem;
+   margin-bottom: 1rem;
+   color: var(--primary-color);
+}
+
+a {
+   color: var(--secondary-color);
+   text-decoration: none;
+   transition: color var(--transition-speed);
+}
+
+a:hover {
+   color: var(--primary-color);
+}
+
+/* Page Container */
+.page {
+   display: none;
+   padding: 2rem;
+   animation: fadeIn 0.5s ease-in-out;
+}
+
+@media (max-width: 480px) {
+   .page {
+      padding: 1rem;
+   }
+}
+
+.page.active {
+   display: block;
+}
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+      transform: translateY(10px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+/* Hero Section */
+.hero {
+   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+   color: white;
+   padding: 4rem 2rem;
+   text-align: center;
+   border-radius: 0 0 var(--border-radius) var(--border-radius);
+   margin-bottom: 2rem;
+}
+
+.hero h1 {
+   font-size: 2.5rem;
+   margin-bottom: 1rem;
+   color: white;
+}
+
+.hero p {
+   font-size: 1.2rem;
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+   .hero {
+      padding: 2.5rem 1.5rem;
+   }
+
+   .hero h1 {
+      font-size: 2rem;
+   }
+
+   .hero p {
+      font-size: 1rem;
+   }
+}
+
+@media (max-width: 480px) {
+   .hero {
+      padding: 2rem 1rem;
+   }
+
+   .hero h1 {
+      font-size: 1.75rem;
+   }
+}
+
+/* Card Styling */
+.card {
+   background-color: white;
+   border-radius: var(--border-radius);
+   box-shadow: var(--card-shadow);
+   overflow: hidden;
+   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+   margin-bottom: 2rem;
+   width: 100%;
+}
+
+.card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 15px 30px rgba(13, 103, 74, 0.15);
+}
+
+.card-header {
+   background-color: var(--primary-color);
+   color: white;
+   padding: 1.5rem;
+}
+
+.card-body {
+   padding: 1.5rem;
+}
+
+@media (max-width: 480px) {
+
+   .card-header,
+   .card-body {
+      padding: 1rem;
+   }
+}
+
+/* Cryptosystem Cards */
+.cryptosystem-card {
+   cursor: pointer;
+   transition: transform var(--transition-speed);
+   border: 2px solid transparent;
+   border-radius: var(--border-radius);
+   padding: 1.5rem;
+   background-color: white;
+   box-shadow: var(--box-shadow);
+   margin-bottom: 1rem;
+}
+
+.cryptosystem-card:hover {
+   transform: scale(1.02);
+   border-color: var(--accent-color);
+}
+
+.cryptosystem-cards-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 1.5rem;
+   margin-top: 2rem;
+}
+
+@media (max-width: 640px) {
+   .cryptosystem-cards-container {
+      grid-template-columns: 1fr;
+   }
+
+   .cryptosystem-card {
+      padding: 1.25rem;
+   }
+}
+
+/* Cipher Detail Page */
+.cipher-detail-container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 2rem;
+   background-color: white;
+   border-radius: var(--border-radius);
+   box-shadow: var(--card-shadow);
+}
+
+.back-button {
+   background-color: var(--primary-color);
+   color: white;
+   border: none;
+   padding: 0.5rem 1rem;
+   border-radius: var(--border-radius);
+   cursor: pointer;
+   margin-bottom: 1.5rem;
+   transition: background-color var(--transition-speed);
+}
+
+.back-button:hover {
+   background-color: var(--secondary-color);
+}
+
+.cipher-detail-content {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 2rem;
+}
+
+.cipher-steps {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 1.5rem;
+   margin: 2rem 0;
+}
+
+.step {
+   background-color: var(--background-color);
+   padding: 1.5rem;
+   border-radius: var(--border-radius);
+   border-left: 4px solid var(--accent-color);
+   transition: transform var(--transition-speed);
+}
+
+.step:hover {
+   transform: translateX(5px);
+}
+
+@media (max-width: 480px) {
+   .cipher-detail-container {
+      padding: 1rem;
+   }
+
+   .step {
+      padding: 1rem;
+   }
+}
+
+.cipher-image {
+   width: 100%;
+   margin: 2rem 0;
+   text-align: center;
+}
+
+.cipher-image img {
+   max-width: 100%;
+   height: auto;
+   border-radius: var(--border-radius);
+   box-shadow: var(--box-shadow);
+}
+
+.cipher-code-implementation {
+   margin: 1.5rem 0;
+   background-color: #f0f5f2;
+   border-radius: var(--border-radius);
+   overflow: hidden;
+}
+
+.cipher-code-implementation pre {
+   padding: 1.5rem;
+   overflow-x: auto;
+   margin: 0;
+}
+
+.cipher-code-implementation code {
+   font-family: 'Fira Code', monospace;
+   line-height: 1.5;
+   font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+   .cipher-code-implementation pre {
+      padding: 0.75rem;
+   }
+
+   .cipher-code-implementation code {
+      font-size: 0.8rem;
+   }
+}
+
+/* Caesar and ElGamal Cipher Live Testing Containers */
+.cipher-container {
+   background-color: var(--background-color);
+   padding: 2rem;
+   border-radius: var(--border-radius);
+   margin-top: 2rem;
+   box-shadow: var(--box-shadow);
+}
+
+.input-group {
+   margin-bottom: 1.5rem;
+}
+
+.input-group label {
+   display: block;
+   margin-bottom: 0.5rem;
+   font-weight: 500;
+   color: var(--primary-color);
+}
+
+.input-group input,
+.input-group textarea {
+   width: 100%;
+   padding: 0.75rem;
+   border: 1px solid #ddd;
+   border-radius: var(--border-radius);
+   font-size: 1rem;
+   transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+   box-sizing: border-box;
+   /* Critical for responsive inputs */
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+   outline: none;
+   border-color: var(--accent-color);
+   box-shadow: 0 0 0 3px rgba(117, 214, 176, 0.3);
+}
+
+.input-group textarea {
+   min-height: 100px;
+   resize: vertical;
+}
+
+.private-input {
+   background-color: #f7f2e9;
+   border-left: 3px solid #e6c06e !important;
+}
+
+.button-group {
+   display: flex;
+   gap: 1rem;
+   margin-top: 1.5rem;
+   flex-wrap: wrap;
+   /* Important for small screens */
+}
+
+.btn-encrypt,
+.btn-decrypt,
+.btn-generate {
+   padding: 0.75rem 1.5rem;
+   border: none;
+   border-radius: var(--border-radius);
+   font-weight: 500;
+   cursor: pointer;
+   transition: all var(--transition-speed);
+   min-width: 120px;
+   /* Minimum width for buttons */
+}
+
+.btn-encrypt {
+   background-color: var(--secondary-color);
+   color: white;
+}
+
+.btn-decrypt {
+   background-color: var(--primary-color);
+   color: white;
+}
+
+.btn-generate {
+   background-color: var(--accent-color);
+   color: var(--text-color);
+}
+
+.btn-encrypt:hover,
+.btn-decrypt:hover,
+.btn-generate:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-encrypt:hover {
+   background-color: #03a249;
+}
+
+.btn-decrypt:hover {
+   background-color: #0b5a40;
+}
+
+.btn-generate:hover {
+   background-color: #64c59f;
+}
+
+@media (max-width: 640px) {
+   .cipher-container {
+      padding: 1.25rem;
+   }
+
+   .button-group {
+      flex-direction: column;
+      gap: 0.75rem;
+   }
+
+   .btn-encrypt,
+   .btn-decrypt,
+   .btn-generate {
+      width: 100%;
+      padding: 0.75rem 1rem;
+   }
+}
+
+/* ElGamal specific styling */
+.key-generation-section,
+.encryption-section {
+   background-color: white;
+   padding: 1.5rem;
+   border-radius: var(--border-radius);
+   margin-bottom: 1.5rem;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.key-generation-section h4,
+.encryption-section h4 {
+   margin-top: 0;
+   border-bottom: 2px solid var(--accent-color);
+   padding-bottom: 0.5rem;
+   margin-bottom: 1.5rem;
+}
+
+@media (max-width: 480px) {
+
+   .key-generation-section,
+   .encryption-section {
+      padding: 1rem;
+   }
+}
+
+/* Responsive grid layout for cipher-container */
+@media (min-width: 1024px) {
+   .cipher-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+   }
+
+   .key-generation-section,
+   .encryption-section {
+      margin-bottom: 0;
+   }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+   .cipher-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+   }
+}
+
+/* Improved responsive styles for cipher-steps grid */
+@media (min-width: 768px) {
+   .cipher-steps {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   }
+}
+
+/* Animation Classes */
+.fade-in {
+   animation: fadeIn 1s;
+}
+
+.slide-in-from-left {
+   animation: slideInFromLeft 0.5s;
+}
+
+.slide-in-from-right {
+   animation: slideInFromRight 0.5s;
+}
+
+.bounce-in {
+   animation: bounceIn 0.5s;
+}
+
+@keyframes slideInFromLeft {
+   from {
+      transform: translateX(-30px);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+@keyframes slideInFromRight {
+   from {
+      transform: translateX(30px);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+@keyframes bounceIn {
+   0% {
+      transform: scale(0.8);
+      opacity: 0;
+   }
+
+   60% {
+      transform: scale(1.05);
+      opacity: 1;
+   }
+
+   100% {
+      transform: scale(1);
+   }
+}
+
+/* Loading/Processing animation for encryption/decryption operations */
+.processing {
+   position: relative;
+}
+
+.processing::after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 20px;
+   height: 20px;
+   margin: -10px 0 0 -10px;
+   border: 2px solid rgba(13, 103, 74, 0.3);
+   border-radius: 50%;
+   border-top-color: var(--primary-color);
+   animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+/* Typed.js cursor styling */
+.typed-cursor {
+   color: var(--accent-color);
+   font-weight: bold;
+}
+
+/* Additional animation for cipher cards */
+.cryptosystem-card {
+   position: relative;
+   overflow: hidden;
+}
+
+.cryptosystem-card::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(90deg,
+         transparent,
+         rgba(255, 255, 255, 0.2),
+         transparent);
+   transition: left 0.7s;
+}
+
+.cryptosystem-card:hover::before {
+   left: 100%;
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+
+   .card:hover,
+   .cryptosystem-card:hover,
+   .step:hover {
+      transform: none;
+   }
+
+   .btn-encrypt:hover,
+   .btn-decrypt:hover,
+   .btn-generate:hover {
+      transform: none;
+   }
+
+   /* Apply active states for touch */
+   .card:active,
+   .cryptosystem-card:active {
+      transform: scale(0.98);
+   }
+
+   .btn-encrypt:active,
+   .btn-decrypt:active,
+   .btn-generate:active {
+      transform: translateY(1px);
+   }
+}
+
+/* Additional breakpoints for extreme screen sizes */
+@media (max-width: 320px) {
+   body {
+      font-size: 13px;
+   }
+
+   .hero h1 {
+      font-size: 1.5rem;
+   }
+
+   .btn-encrypt,
+   .btn-decrypt,
+   .btn-generate {
+      padding: 0.6rem 1rem;
+   }
+}
+
+@media (min-width: 1440px) {
+
+   .cipher-detail-container,
+   .cryptosystem-cards-container {
+      max-width: 1400px;
+      margin: 0 auto;
+   }
+
+   body {
+      font-size: 18px;
+   }
+}

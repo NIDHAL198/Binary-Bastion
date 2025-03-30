@@ -392,9 +392,9 @@ populateElGamalDetailPage(pageElement) {
                
                <p>The security of ElGamal relies on the computational difficulty of calculating discrete logarithms in a large prime modulus finite field, which remains a hard mathematical problem even with today's advanced computing capabilities.</p>
 
-               <div class="cipher-image">
-                  <img src="./assets/images/elgamel/Taher_Elgamal_it-sa_2010.jpg"   alt="elgamel crypto sys">
-               </div>
+               // <div class="cipher-image">
+               //    <img src="./assets/images/elgamel/Taher_Elgamal_it-sa_2010.jpg"   alt="elgamel crypto sys">
+               // </div>
 
                <h2>How It Works</h2>
                <div class="cipher-steps">
@@ -938,7 +938,6 @@ function decryptElGamalMessage() {
    }
 }
 // end  the elgamel logiquique
-
 
 // Initialize Platform on Page Load -->
 document.addEventListener('DOMContentLoaded', () => {
